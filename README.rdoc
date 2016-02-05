@@ -1,3 +1,3 @@
 == README
 
-Planer app. Manage and prioritize your tasks with ease. Priorities are taken from the book "Seven habits of highly effective people." by Stephen Covey.
+Planer app. Manage and prioritize your tasks with ease. Priorities are taken from the book "Seven habits of highly effective people" by Stephen Covey.
