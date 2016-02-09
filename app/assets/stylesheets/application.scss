@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require rails_bootstrap_forms
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.navigation {
+  background-color: #16454c;
+}
+
+.navbar {
+  margin-top: 20px;
+  background-color: #16454c;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+a{
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a{
+  outline: 0;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color: #16454c;
+  background-color: white;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+  outline: 0;
+  color: white;
+}
+.navbar-default .navbar-brand:hover{
+  color: #16454c;
+  background-color: white;
+}
+
+
+body {
+  background-color: white;
+  color: #16454c;
+}
+
+.central {
+  text-align: center;
+}
+
+footer{
+  padding-top: 60px;
+}
+
+.btn-default {
+  color: #16454c;
+  margin-bottom: 5px;
+}
+
+.task_name {
+  color: #16454c;
+  font-size: 120%;
+}
+
+.social {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  font-size: 120%;
+}
+
+.social a{
+  border: medium solid #16454c;
+  border-radius: 5px;
+  color: #16454c;
+  padding: 15px;
+}
+
+span{
+  margin: 5px;
+}
+
+p > a {
+  color: #16454c;
+}

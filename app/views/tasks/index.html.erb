@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 central">
+      <h1><%= link_to 'New task', new_task_path, class: 'btn btn-default' %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-offset-2 col-md-8">
+      <div class="table-responsive">
+        <div class="input-group">
+          <span class="input-group-addon">Filter</span>
+          <input id="filter" type="text" class="form-control" placeholder="Type here...">
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody class="searchable">
+            <%= render @tasks %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 central">
+      <div>
+        <h1><%= link_to @task.name, @task, class: 'task_name' %></h1>
+        <p><%= @task.description %></p>
+        <p><%= @task.category %></p>
+      </div>
+      <%= button_to 'Edit', edit_task_path(@task), class: 'btn btn-default', method: :get %>
+      <%= button_to "Task completed", task_path(@task),class: 'btn btn-default', method: 'delete', data: { confirm: 'Are you sure?'} %>
+    </div>
+  </div>
+</div>

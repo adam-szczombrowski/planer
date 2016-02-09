@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 central">
+      <h1><%= @user.name %></h1>
+      <p><%= @user.email %></p>
+      <p>Tasks to do: <%= @user.tasks.count %></p>
+      <%= button_to 'Edit account', edit_user_path(@user), class: "btn btn-default", method: :get %>
+      <%= button_to 'Delete account', user_path(@user), class: 'btn btn-default', method: 'delete', data: {confirm: "Are you sure?"} %>
+    </div>
+  </div>
+</div>
