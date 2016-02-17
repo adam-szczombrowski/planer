@@ -16,21 +16,20 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-
-$(document).ready(function () {
-
-    (function ($) {
-
-        $('#filter').keyup(function () {
-
-            var rex = new RegExp($(this).val(), 'i');
-            $('.searchable tr').hide();
-            $('.searchable tr').filter(function () {
-                return rex.test($(this).text());
-            }).show();
-
-        })
-
-    }(jQuery));
-
+$(function() {
+  initPage();
 });
+
+$(window).bind('page:change', function() {
+  initPage();
+});
+
+function initPage() {
+    $('#filter').keyup(function () {
+      var rex = new RegExp($(this).val(), 'i');
+      $('.searchable tr').hide();
+      $('.searchable tr').filter(function () {
+          return rex.test($(this).text());
+      }).show();
+  });
+}
