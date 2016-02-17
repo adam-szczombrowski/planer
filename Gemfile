@@ -5,7 +5,7 @@ gem 'rails', '4.2.3'
 gem 'bootstrap_form'
 
 
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -46,3 +46,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'rails_12factor', group: :production
+
+ruby "2.2.0"

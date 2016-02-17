@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160209105302) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "tasks", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160209105302) do
     t.string   "category"
   end
 
-  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
