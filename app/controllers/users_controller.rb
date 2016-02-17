@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = 'Welcome to Planer!'
-      redirect_to @user
+      redirect_to tasks_path
     else
       render 'new'
     end
