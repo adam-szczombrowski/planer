@@ -2,13 +2,18 @@ require 'rails_helper'
 require 'factory_girl_rails'
 
 RSpec.describe User, type: :model do
+  before :each do
+    @user = FactoryGirl.create(:user)
+  end
   it "is invalid without an email" do
-    FactoryGirl.create(:user).should be_valid
+    @user.should be_valid
   end
   it "is invalid without a name" do
-    FactoryGirl.build(:user, name: nil).should_not be_valid
+    @user.name = nil
+    @user.should_not be_valid
   end
   it "is invalid without password" do
-    FactoryGirl.build(:user, password: nil).should_not be_valid
+    @user.password = nil
+    @user.should_not be_valid
   end
 end
