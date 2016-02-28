@@ -13,14 +13,17 @@ RSpec.describe Task, type: :model do
     task.name = nil
     expect(task).to_not be_valid
   end
+
   it "is invalid without description" do
     task.description = nil
     expect(task).to_not be_valid
   end
+
   it "is invalid without category" do
     task.category = nil
     expect(task).to_not be_valid
   end
+
   it "is invalid with wrong category" do
     task.category = "C5"
     expect(task).to_not be_valid
